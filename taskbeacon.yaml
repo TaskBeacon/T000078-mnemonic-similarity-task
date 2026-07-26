@@ -1,0 +1,23 @@
+id: T000078
+slug: mnemonic-similarity-task
+title: Mnemonic Similarity Task
+acquisition: behavior
+variant: baseline
+cognitive_domain:
+  - episodic-memory
+  - pattern-separation
+  - hippocampal-function
+maturity: draft
+version:
+  release_tag: v0.1.0
+contracts:
+  taps: v0.2.0
+runtime:
+  profile: psyflow
+evidence:
+  - https://doi.org/10.1016/j.tics.2019.08.003
+  - https://doi.org/10.1101/lm.663507
+  - https://doi.org/10.1073/pnas.1411250111
+  - https://doi.org/10.1002/hipo.20808
+maintainer:
+  - TaskBeacon

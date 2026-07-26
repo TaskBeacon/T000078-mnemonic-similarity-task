@@ -1,0 +1,107 @@
+subinfo_fields:
+  - {name: subject_id, type: str}
+subinfo_mapping:
+  subject_id: 参与者编号
+  Participant Information: 参与者信息
+  registration_failed: 登记失败
+  registration_successful: 登记成功
+  invalid_input: "{field} 输入无效"
+window:
+  size: [1280, 800]
+  units: deg
+  screen: 0
+  bg_color: white
+  fullscreen: false
+  monitor_width_cm: 35.5
+  monitor_distance_cm: 57
+task:
+  task_name: Mnemonic Similarity Task
+  save_path: ./outputs
+  language: Chinese
+  total_blocks: 2
+  total_trials: 320
+  trial_per_block: 160
+  items_per_test_condition: 64
+  conditions: [study_repeat, study_lure, target, lure, foil]
+  key_list: [v, b, n, space]
+  study_indoor_key: v
+  study_outdoor_key: n
+  old_key: v
+  similar_key: b
+  new_key: n
+  seed_mode: same_across_sub
+  random_seed: 78078
+  delta: 0.0
+  phase_order: [study_instruction, study, isi, test_instruction, test, isi, good_bye]
+timing:
+  object_duration: 2.0
+  isi_duration: 0.5
+stimuli:
+  study_instruction:
+    type: text
+    font: SimHei
+    text: "第一阶段\n\n屏幕中央会依次出现日常物品图片。\n请判断每件物品通常属于室内还是室外。\n\n按 V 表示“室内”，按 N 表示“室外”。\n请在图片出现时作答。\n\n按空格键开始。"
+    color: black
+    height: 0.62
+    wrapWidth: 24
+    pos: [0, 0]
+  test_instruction:
+    type: text
+    font: SimHei
+    text: "第二阶段：记忆测验\n\n接下来每张图片可能是：\n旧——与第一阶段完全相同；\n相似——与第一阶段某件物品相似但并不相同；\n新——第一阶段没有出现过。\n\n按 V 选择“旧”，按 B 选择“相似”，按 N 选择“新”。\n\n按空格键开始。"
+    color: black
+    height: 0.58
+    wrapWidth: 25
+    pos: [0, 0]
+  object_image:
+    type: image
+    image: assets/objects/001a.jpg
+    size: [10, 10]
+    units: deg
+    pos: [0, -0.4]
+  study_prompt:
+    type: text
+    font: SimHei
+    text: "室内还是室外？    V = 室内    N = 室外"
+    color: black
+    height: 0.55
+    wrapWidth: 24
+    pos: [0, 6.0]
+  test_prompt:
+    type: text
+    font: SimHei
+    text: "旧、相似还是新？    V = 旧    B = 相似    N = 新"
+    color: black
+    height: 0.55
+    wrapWidth: 25
+    pos: [0, 6.0]
+  blank: {type: text, font: SimHei, text: "", color: black, height: 0.5, pos: [0, 0]}
+  good_bye:
+    type: text
+    font: SimHei
+    text: "任务完成\n\n诱饵辨别指数（LDI）：{ldi}\n校正再认指数（REC）：{recognition}\n测试正确率：{accuracy}\n测试作答率：{response_rate}\n平均反应时：{mean_rt} 秒\n\n按空格键退出。"
+    color: black
+    height: 0.58
+    wrapWidth: 24
+    pos: [0, 0]
+triggers:
+  map:
+    experiment_start: 1
+    block_start: 10
+    study_image: 20
+    study_indoor_response: 21
+    study_outdoor_response: 22
+    study_timeout: 23
+    target: 30
+    lure: 31
+    foil: 32
+    old_response: 40
+    similar_response: 41
+    new_response: 42
+    test_timeout: 43
+    isi: 50
+    block_end: 90
+    experiment_end: 99
+  driver: {type: serial_url, url: "loop://", baudrate: 115200, timeout: 1}
+  policy: {strict: false}
+  timing: {post_delay_s: 0.001}

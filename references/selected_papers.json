@@ -1,0 +1,62 @@
+[
+  {
+    "id": "SRC001",
+    "title": "Mnemonic Similarity Task: A Tool for Assessing Hippocampal Integrity",
+    "authors": ["Shauna M. Stark", "C. Brock Kirwan", "Craig E. L. Stark"],
+    "year": 2019,
+    "journal": "Trends in Cognitive Sciences",
+    "doi_or_url": "https://doi.org/10.1016/j.tics.2019.08.003",
+    "citation_count": 338,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["canonical_two_phase_workflow", "condition_semantics", "lure_bins", "ldi", "recognition_index"],
+    "parameter_bindings": {
+      "task.study_trials": 128,
+      "task.test_trials": 192,
+      "task.items_per_test_condition": 64
+    },
+    "notes": "Primary MST design review. Open full text: https://pmc.ncbi.nlm.nih.gov/articles/PMC6991464/"
+  },
+  {
+    "id": "SRC002",
+    "title": "Overcoming interference: An fMRI investigation of pattern separation in the medial temporal lobe",
+    "authors": ["C. Brock Kirwan", "Craig E. L. Stark"],
+    "year": 2007,
+    "journal": "Learning & Memory",
+    "doi_or_url": "https://doi.org/10.1101/lm.663507",
+    "citation_count": 382,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["original_paradigm", "old_similar_new_responses", "hippocampal_pattern_separation"],
+    "parameter_bindings": {},
+    "notes": "Original open-access pattern-separation task report."
+  },
+  {
+    "id": "SRC003",
+    "title": "Object and spatial mnemonic interference differentially engage lateral and medial entorhinal cortex in humans",
+    "authors": ["Zachariah M. Reagh", "Michael A. Yassa"],
+    "year": 2014,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "doi_or_url": "https://doi.org/10.1073/pnas.1411250111",
+    "citation_count": 252,
+    "is_high_impact": true,
+    "open_access": true,
+    "used_for": ["object_mnemonic_interference", "medial_temporal_lobe_validity", "pattern_separation_construct"],
+    "parameter_bindings": {},
+    "notes": "High-impact open-access supporting paper linking object mnemonic interference to medial temporal-lobe function."
+  },
+  {
+    "id": "SRC004",
+    "title": "Pattern separation deficits associated with increased hippocampal CA3 and dentate gyrus activity in nondemented older adults",
+    "authors": ["Michael A. Yassa", "Shauna M. Stark", "Abdul S. Bakker", "Albert V. Knierim", "Craig E. L. Stark"],
+    "year": 2010,
+    "journal": "Hippocampus",
+    "doi_or_url": "https://doi.org/10.1002/hipo.20808",
+    "citation_count": 623,
+    "is_high_impact": false,
+    "open_access": true,
+    "used_for": ["dentate_gyrus_ca3_validity", "aging_sensitivity", "lure_discrimination"],
+    "parameter_bindings": {},
+    "notes": "Open-access neural-validity evidence for lure discrimination and hippocampal DG/CA3 function."
+  }
+]
