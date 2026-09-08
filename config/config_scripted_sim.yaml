@@ -32,7 +32,7 @@ stimuli:
   good_bye: {type: text, font: SimHei, text: "任务完成\n\nLDI：{ldi}\nREC：{recognition}\n正确率：{accuracy}\n作答率：{response_rate}\n平均反应时：{mean_rt} 秒\n\n按空格键退出。", color: black, height: 0.58, wrapWidth: 24, pos: [0, 0]}
 triggers:
   map: {experiment_start: 1, block_start: 10, study_image: 20, study_indoor_response: 21, study_outdoor_response: 22, study_timeout: 23, target: 30, lure: 31, foil: 32, old_response: 40, similar_response: 41, new_response: 42, test_timeout: 43, isi: 50, block_end: 90, experiment_end: 99}
-  driver: {type: serial_url, url: "loop://"}
+  driver: {type: mock, print_codes: true}
   policy: {strict: false}
 sim:
   output_dir: outputs/sim_scripted
